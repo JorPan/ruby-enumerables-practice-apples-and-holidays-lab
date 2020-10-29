@@ -1,46 +1,61 @@
 require 'pry'
 
 def second_supply_for_fourth_of_july(holiday_hash)
-  # given that holiday_hash looks like this:
-  # {
-  #   :winter => {
-  #     :christmas => ["Lights", "Wreath"],
-  #     :new_years => ["Party Hats"]
-  #   },
-  #   :summer => {
-  #     :fourth_of_july => ["Fireworks", "BBQ"]
-  #   },
-  #   :fall => {
-  #     :thanksgiving => ["Turkey"]
-  #   },
-  #   :spring => {
-  #     :memorial_day => ["BBQ"]
-  #   }
-  # }
-  # return the second element in the 4th of July array
+  holiday_hash[:summer][:fourth_of_july][1]
 end
 
-def add_supply_to_winter_holidays(holiday_hash, supply)
-  # holiday_hash is identical to the one above
-  # add the second argument, which is a supply, to BOTH the
-  # Christmas AND the New Year's arrays
 
+# #TRYING TO MAKE HELPER METHOD
+# def holidays_per(season)
+#   holiday_hash.map do |seasons|
+#     seasons
+#   end
+# end
+
+
+# def second_supply_for_fourth_of_july(holiday_hash)
+#   # given that holiday_hash looks like this:
+#   # {
+#   #   :winter => {
+#   #     :christmas => ["Lights", "Wreath"],
+#   #     :new_years => ["Party Hats"]
+#   #   },
+#   #   :summer => {
+#   #     :fourth_of_july => ["Fireworks", "BBQ"]
+#   #   },
+#   #   :fall => {
+#   #     :thanksgiving => ["Turkey"]
+#   #   },
+#   #   :spring => {
+#   #     :memorial_day => ["BBQ"]
+#   #   }
+#   # }
+#   # return the second element in the 4th of July array
+# end
+
+#ADD SUPPLY TO BOTH HOLIDAYS IN WINTER#
+def add_supply_to_winter_holidays(holiday_hash, supply)
+  holiday_hash[:winter].map do |holiday|
+    holiday[1].push(supply) 
+  end
 end
 
 
 def add_supply_to_memorial_day(holiday_hash, supply)
-  # again, holiday_hash is the same as the ones above
-  # add the second argument to the memorial day array
-
+  holiday_hash[:spring][:memorial_day].push(supply)
 end
 
 def add_new_holiday_with_supplies(holiday_hash, season, holiday_name, supply_array)
-  # code here
-  # remember to return the updated hash
+  # holiday_hash[season] += 
+  # binding.pry
 
 end
 
-def all_winter_holiday_supplies(holiday_hash)
+# def all_winter_holiday_supplies(holiday_hash)
+#   holiday_hash[:winter].map do |holiday, supplies|
+#     # binding.pry
+#     supplies
+#   end
   # return an array of all of the supplies that are used in the winter season
 
 end
@@ -65,6 +80,7 @@ end
 
 
 
-
+#binding.pry
+0
 
 
